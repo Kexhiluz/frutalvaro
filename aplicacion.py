@@ -54,7 +54,7 @@ def borrarProducto(nombre_producto):
             productos_encontrados=productos
 
     if len(productos_encontrados)>0:
-        productos.remove(productos_encontrados[0])
+        productos.pop(productos_encontrados[0])
         return jsonify({
             'mensaje': 'El producto ha sido borrado',
             'productos': productos

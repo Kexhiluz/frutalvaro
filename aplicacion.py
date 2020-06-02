@@ -4,6 +4,10 @@ app = Flask(__name__)
 
 from frutas import productos
 
+@app.route("/")
+def saludo():
+    print("Bienvenido a mi API REST")
+
 @app.route("/productos")
 def obtenerProductos():
     return jsonify({"productos": productos, "mensaje": "Lista de frutas" })
